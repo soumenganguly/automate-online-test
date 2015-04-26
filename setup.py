@@ -21,7 +21,7 @@ if wget_call==0:
                         print "Dependencies installed"
                         #Create a django project
                         create_project = subprocess.call("source online_test/bin/activate && django-admin.py startproject django_online_test", shell=True)
-                        if create_project=0:
+                        if create_project==0:
                             print "Online test project created"
                             #Manipulate the project settings
                             subprocess.call("touch django_online_test/django_online_test/new_settings.py", shell=True)
