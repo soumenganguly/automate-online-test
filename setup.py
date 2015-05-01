@@ -16,7 +16,7 @@ def manipulate_settings():
     new_file.write("BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))")
     new_file.write("\n\n")
 
-    new_file.write("SECRET_KEY = %s"%(settings.SECRET_KEY))
+    new_file.write("SECRET_KEY = '%s'"%(settings.SECRET_KEY))
     new_file.write("\n\n")
 
     new_file.write("DEBUG = %s"%(settings.DEBUG))
@@ -40,19 +40,19 @@ def manipulate_settings():
     new_file.write("MIDDLEWARE_CLASSES = %s"%(str(settings.MIDDLEWARE_CLASSES)))
     new_file.write("\n\n")
 
-    new_file.write("ROOT_URLCONF = %s"%(settings.ROOT_URLCONF))
+    new_file.write("ROOT_URLCONF = '%s'"%(settings.ROOT_URLCONF))
     new_file.write("\n\n")
 
-    new_file.write("WSGI_APPLICATION = %s"%(settings.WSGI_APPLICATION))
+    new_file.write("WSGI_APPLICATION = '%s'"%(settings.WSGI_APPLICATION))
     new_file.write("\n\n")
 
     new_file.write("DATABASES = %s"%(settings.DATABASES))
     new_file.write("\n\n")
 
-    new_file.write("LANGUAGE_CODE = %s"%(settings.LANGUAGE_CODE))
+    new_file.write("LANGUAGE_CODE = '%s'"%(settings.LANGUAGE_CODE))
     new_file.write("\n\n")
 
-    new_file.write("TIME_ZONE = %s"%(settings.TIME_ZONE))
+    new_file.write("TIME_ZONE = '%s'"%(settings.TIME_ZONE))
     new_file.write("\n\n")
 
     new_file.write("USE_I18N = %s"%(settings.USE_I18N))
@@ -64,7 +64,7 @@ def manipulate_settings():
     new_file.write("USE_TZ = %s"%(settings.USE_TZ))
     new_file.write("\n\n")
 
-    new_file.write("STATIC_URL = %s"%(settings.STATIC_URL))
+    new_file.write("STATIC_URL = '%s'"%(settings.STATIC_URL))
     new_file.write("\n\n")
 
     new_file.close()
@@ -73,7 +73,7 @@ def manipulate_settings():
 def manipulate_urls():
     new_urls_file = open("django_online_test/django_online_test/new_urls.py","a")
 
-    new_urls_file.write("from django.conf.urls import pattern, include, url")
+    new_urls_file.write("from django.conf.urls import patterns, include, url")
     new_urls_file.write("\n\n")
 
     new_urls_file.write("from django.contrib import admin")
