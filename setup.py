@@ -28,7 +28,7 @@ def manipulate_settings():
     new_file.write("TEMPLATE_DEBUG = %s"%(settings.TEMPLATE_DEBUG))
     new_file.write("\n\n")
 
-    new_file.write("AUTH_PROFILE_MODULE = 'testapp.exam.Profile'")
+    new_file.write("AUTH_PROFILE_MODULE = 'exam.Profile'")
     new_file.write("\n\n")
 
     test_apps = ('testapp.exam','taggit','taggit_autocomplete_modified')
@@ -61,8 +61,6 @@ def manipulate_settings():
     new_file.write("USE_L10N = %s"%(settings.USE_L10N))
     new_file.write("\n\n")
 
-    new_file.write("USE_TZ = %s"%(settings.USE_TZ))
-    new_file.write("\n\n")
 
     new_file.write("STATIC_URL = '%s'"%(settings.STATIC_URL))
     new_file.write("\n\n")
