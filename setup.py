@@ -31,7 +31,7 @@ def manipulate_settings():
     new_file.write("AUTH_PROFILE_MODULE = 'exam.Profile'")
     new_file.write("\n\n")
 
-    test_apps = ('testapp.exam','taggit','taggit_autocomplete_modified')
+    test_apps = ('testapp.exam','taggit','taggit_autocomplete_modified',)
     default_apps = settings.INSTALLED_APPS
     online_test_app = default_apps.__add__(test_apps)
     new_file.write("INSTALLED_APPS = %s"%(str(online_test_app)))
