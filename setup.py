@@ -3,6 +3,7 @@
 import subprocess
 import os
 import sys
+import re
 pwd = os.getcwd()
 sys.path.append(pwd+'/django_online_test/django_online_test')
 
@@ -34,7 +35,8 @@ def manipulate_settings():
     test_apps = ('testapp.exam','taggit','taggit_autocomplete_modified',)
     default_apps = settings.INSTALLED_APPS
     online_test_app = default_apps.__add__(test_apps)
-    new_file.write("INSTALLED_APPS = %s"%(str(online_test_app)))
+    comma_append = re.sub('\)',',)',str(online_test_app))
+    new_file.write("INSTALLED_APPS = %s"%(comma_append))
     new_file.write("\n\n")
     
     new_file.write("MIDDLEWARE_CLASSES = %s"%(str(settings.MIDDLEWARE_CLASSES)))
