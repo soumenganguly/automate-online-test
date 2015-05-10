@@ -3,9 +3,11 @@ Automate the FOSSEE online test interface
 
 Prerequisites
 --------------
-I.   mysql(server and client)
-II.  git
-III. wget
+I.   MySQL(server and client)
+
+II.  Git
+
+III. Wget
 
 Steps to initialize the test interface
 --------------------------------------
