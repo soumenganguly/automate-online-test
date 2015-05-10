@@ -1,19 +1,22 @@
 Automate the FOSSEE online test interface
 =========================================
 
-1)Prerequisites
+Prerequisites
+--------------
+I.   mysql(server and client)
+II.  git
+III. wget
 
-mysql(server and client)
+Steps to initialize the test interface
+--------------------------------------
 
-2)Steps to initialize the test interface
+I.   Create a directory in your $HOME
 
-i) Create a directory in your $HOME
+II.  Download this repository inside this directory 
 
-ii) Download this repository inside this directory 
+III. Unzip/untar the directory contents inside this directory 
 
-iii) unzip/untar the directory contents inside this directory 
-
-iv) Run the setup.py script located inside the extracted repository.
+IV.  Run the setup.py script located inside the extracted repository.
 
 
 
