@@ -92,16 +92,16 @@ wget_call = subprocess.call("wget https://pypi.python.org/packages/source/v/virt
 if(wget_call==0):
     tar_call = subprocess.call("tar xf virtualenv-12.1.1.tar.gz", shell=True)
     if(tar_call==0):
-        setup_call = subprocess.call("cd virtualenv-12.1.1 && sudo python setup.py install", shell=True)
+        setup_call = subprocess.call("cd virtualenv-12.1.1 && sudo python setup.py install --quiet", shell=True)
         if(setup_call==0): #create and activate the virtualenv
                 print "Successfully installed virtualenv"
                 create_venv = subprocess.call(["virtualenv","online_test"])
                 if(create_venv==0): #Install the dependencies inside the virtualenv"
                     print "Virtualenv created"
-                    install_dep = subprocess.call("online_test/bin/easy_install git+https://github.com/FOSSEE/online_test.git#egg=django_exam-0.1", shell=True)
+                    install_dep = subprocess.call("online_test/bin/easy_install --quiet git+https://github.com/FOSSEE/online_test.git#egg=django_exam-0.1 ", shell=True)
                     if(install_dep==0): #Create a django project
                         print "Dependencies installed"
-                        create_project = subprocess.call("online_test/bin/django-admin.py startproject django_online_test", shell=True)
+                        create_project = subprocess.call("online_test/bin/django-admin.py startproject django_online_test --verbosity=0", shell=True)
                         if(create_project==0):
                             print "Online test project created"
                             
@@ -118,7 +118,7 @@ if(wget_call==0):
                             new_urls = subprocess.call("mv django_online_test/django_online_test/new_urls.py django_online_test/django_online_test/urls.py", shell=True)
                             if(new_settings==0 and new_urls==0): #Running the application on localhost
                                 sync_db = subprocess.call("online_test/bin/python django_online_test/manage.py syncdb", shell=True)
-                                run_app = subprocess.call("online_test/bin/python django_online_test/manage.py runserver", shell=True)
+                                run_app = subprocess.call("online_test/bin/python django_online_test/manage.py runserver --verbosity=0", shell=True)
                                 if(sync_db and run_app==0):
                                     print "The online test interface is running, please point your browser to http://localhost:8000/exam"
                                 else:
@@ -137,4 +137,3 @@ if(wget_call==0):
         print "tar call failed"
 else:
     print "wget call failed"
-
