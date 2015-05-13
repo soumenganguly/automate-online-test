@@ -10,11 +10,12 @@ II.  Git
 
 III. Wget
 
+~~~~~~~~~~~~
+
 .. note::
 You need to have superuser access to the machine in which you're trying to install the interface.
   
-Steps to initialize the test interface
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##Steps to initialize the test interface
 
 I.   Create a directory in your $HOME
 
