@@ -1,16 +1,20 @@
 Automate the FOSSEE online test interface
-=========================================
+-----------------------------------------
 
-Prerequisites
---------------
+Pre-requisites
+~~~~~~~~~~~~~
+
 I.   MySQL(server and client)
 
 II.  Git
 
 III. Wget
 
+.. note::
+You need to have superuser access to the machine in which you're trying to install the interface.
+  
 Steps to initialize the test interface
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 I.   Create a directory in your $HOME
 
