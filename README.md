@@ -12,8 +12,7 @@ III. Wget
 
 ~~~~~~~~~~~~
 
-.. note:
-You need to have superuser access to the machine in which you're trying to install the interface.
+Note: You need to have superuser access to the machine in which you're trying to install the interface.
   
 Steps to initialize the test interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
